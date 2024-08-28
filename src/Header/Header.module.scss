@@ -1,0 +1,36 @@
+@import "../variables";
+
+.header {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+  padding-bottom: $TB_paddings;
+}
+
+.logo {
+  width: 95px;
+  height: 72px;
+  align-self: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  &.light {
+    background-image: url("../../public/logo_dark.svg");
+  }
+  &.dark {
+    background-image: url("../../public/logo.svg");
+  }
+}
+
+
+
+.links {
+  display: flex;
+  align-items: center;
+
+  li {
+    margin-right: 100px;
+  }
+}
