@@ -1,13 +1,11 @@
-import React, {useEffect} from 'react';
+import React, {useContext} from 'react';
 import styles from './Header.module.scss';
 import Brackets from '../components/components';
+import {ThemeContext} from '../App/App';
+
 
 const Header: React.FC = () => {
-    const [theme, setTheme] = React.useState<string>('dark');
-
-    useEffect(() => {
-        document.documentElement.setAttribute('data-theme', theme);
-    }, [theme]);
+    const [theme, setTheme] = useContext(ThemeContext);
 
     return (
         <div className={styles.header}>
@@ -35,8 +33,10 @@ const Header: React.FC = () => {
                 </li>
             </ul>
 
-            <button onClick={() => {
-                theme === 'dark' ? setTheme('light') : setTheme('dark');
+            <button className={styles.themeSwitcher} onClick={() => {
+                if (setTheme !== null) {
+                    theme === 'dark' ? setTheme('light') : setTheme('dark');
+                }
             }}>
                 <Brackets>
                     {theme === 'dark' ? 'switchToLightTheme' : 'switchToDarkTheme'}
