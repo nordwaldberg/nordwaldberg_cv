@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
 import styles from './App.module.scss';
-import MainPage from '../pages/MainPage/MainPage';
+import MainPage from '../../pages/MainPage/MainPage';
 import Header from '../Header/Header';
-import {getBrowserDefaultColorTheme} from '../utils/getBrowserDefaultColorTheme';
+import {getBrowserDefaultColorTheme} from '../../utils/getBrowserDefaultColorTheme';
 
 export const ThemeContext = React.createContext<[string, React.Dispatch<React.SetStateAction<string>>] | null[]>([null, null]);
 

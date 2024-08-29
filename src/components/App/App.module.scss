@@ -1,4 +1,4 @@
-@import "../variables";
+@import "../../variables";
 
 .appBackground {
   z-index: -666;
@@ -14,9 +14,9 @@
 }
 
 .darkThemeBackground {
-  background-image: url("../../public/dark_net.svg");
+  background-image: url("../../../public/dark_net.svg");
 }
 
 .lightThemeBackground {
-  background-image: url("../../public/light_net.svg");
+  background-image: url("../../../public/light_net.svg");
 }

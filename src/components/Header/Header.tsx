@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import styles from './Header.module.scss';
-import Brackets from '../components/components';
+import Brackets from '../misc/components';
 import {ThemeContext} from '../App/App';
 
 
