@@ -15,4 +15,22 @@ const Brackets: React.FC<BracketsProps> = ({children}) => {
     );
 };
 
-export default Brackets;
+const marqueeText = `Frontend // UI/UX Design // Illustration // Graphic Design // Frontend // UI/UX Design // Illustration // Graphic Design // Frontend // UI/UX Design // Illustration // Graphic Design // Frontend // UI/UX Design // Illustration // Graphic Design // Frontend // UI/UX Design // Illustration // Graphic Design // Frontend // UI/UX Design // Illustration // Graphic Design // Frontend // UI/UX Design // Illustration // Graphic Design // Frontend // UI/UX Design // Illustration // Graphic Design //`;
+
+const Marquee: React.FC = () => {
+    return (
+        <div className={styles.marqueeContainer}>
+            <div className={styles.marqueeWrapper}>
+                <div className={styles.marquee}>
+                    <span>{marqueeText}</span>
+                </div>
+            </div>
+        </div>
+    );
+
+}
+
+export {
+    Brackets,
+    Marquee,
+};

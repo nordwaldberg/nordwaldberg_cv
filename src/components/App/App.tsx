@@ -8,7 +8,6 @@ export const ThemeContext = React.createContext<[string, React.Dispatch<React.Se
 
 const App = () => {
     const [theme, setTheme] = React.useState<string>(getBrowserDefaultColorTheme());
-    console.log(getBrowserDefaultColorTheme(), theme)
 
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);

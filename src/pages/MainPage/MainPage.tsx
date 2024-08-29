@@ -1,4 +1,5 @@
 import React from 'react';
+import {Marquee} from '../../components/misc/components';
 
 // interface MainPageProps {
 //  children?: React.Child | React.ReactNode;
@@ -6,7 +7,9 @@ import React from 'react';
 
 const MainPage: React.FC = () => {
     return (
-        <div></div>
+        <>
+            <Marquee/>
+        </>
     );
 };
 
