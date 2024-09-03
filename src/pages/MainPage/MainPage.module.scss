@@ -1,0 +1,22 @@
+.pageContainer {
+  display: flex;
+  height: calc(100% - 100px);
+}
+
+.title {
+  align-self: center;
+  font-weight: 800;
+  font-size: 8rem;
+  margin-left: 10%;
+}
+
+.pointerIcon {
+  position: absolute;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  align-self: center;
+  background-image: url("../../../public/pointer_dark.PNG");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
