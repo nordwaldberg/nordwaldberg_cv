@@ -2,10 +2,14 @@ import React, {useContext} from 'react';
 import styles from './Header.module.scss';
 import {Brackets} from '../misc/components';
 import {ThemeContext} from '../App/App';
+import OpenContactsModal from '../OpenContactsModal/OpenContactsModal';
+import ShowCertificatesModal from '../ShowCertificatesModal/ShowCertificatesModal';
 
 
 const Header: React.FC = () => {
     const [theme, setTheme] = useContext(ThemeContext);
+    const [isContactsVisible, setContactsVisible] = React.useState(false);
+    const [isCertificatesVisible, setCertificatesVisible] = React.useState(false);
 
     return (
         <div className={styles.header}>
@@ -18,17 +22,12 @@ const Header: React.FC = () => {
                 </li>
                 <li>
                     <Brackets>
-                        openContacts
+                        <button onClick={() => setContactsVisible(true)}>openContacts</button>
                     </Brackets>
                 </li>
                 <li>
                     <Brackets>
-                        showCertificates
-                    </Brackets>
-                </li>
-                <li>
-                    <Brackets>
-                        showProjects
+                        <button onClick={() => setCertificatesVisible(true)}>showCertificates</button>
                     </Brackets>
                 </li>
             </ul>
@@ -42,6 +41,8 @@ const Header: React.FC = () => {
                     {theme === 'dark' ? 'switchToLightTheme' : 'switchToDarkTheme'}
                 </Brackets>
             </button>
+            <OpenContactsModal visible={isContactsVisible} setVisible={setContactsVisible}/>
+            <ShowCertificatesModal visible={isCertificatesVisible} setVisible={setCertificatesVisible}/>
         </div>
     );
 };

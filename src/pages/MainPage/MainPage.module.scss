@@ -16,7 +16,14 @@
   width: 60%;
   height: 60%;
   align-self: center;
-  background-image: url("../../../public/pointer_dark.PNG");
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.light {
+  background-image: url("../../../public/pointer_dark.PNG");
+}
+
+.dark {
+  background-image: url("../../../public/pointer_light.PNG");
 }

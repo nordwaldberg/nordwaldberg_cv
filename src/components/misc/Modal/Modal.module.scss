@@ -1,0 +1,46 @@
+@import "../../../variables";
+
+.wrapper {
+  position: fixed;
+  z-index: 666;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: rgba(34, 34, 34, 0.5);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 150ms;
+}
+
+.wrapperVisible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.light {
+  background-color: $main_color_light;
+  border: 2px solid $main_color_dark;
+}
+
+.dark {
+  background-color: $main_color_dark;
+  border: 2px solid $main_color_light;
+}
+
+.popupWrapper {
+  width: 50%;
+  padding: 20px 40px;
+  transform: scale(0);
+  transition: 150ms;
+  overflow: auto;
+}
+
+.popupVisible {
+  transform: scale(1);
+}
