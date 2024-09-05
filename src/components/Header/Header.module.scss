@@ -32,12 +32,16 @@
   align-items: center;
   flex-wrap: wrap;
 
-  li {
-    padding: 10px 0;
+  .link {
+    padding: 10px;
+
+    &:first-child {
+      padding-bottom: 0;
+    }
   }
 }
 
 .themeSwitcher {
-  padding: 10px 0;
+  padding: 10px;
   margin-left: 20px;
 }
