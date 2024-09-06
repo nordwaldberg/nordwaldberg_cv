@@ -12,8 +12,10 @@ const MainPage: React.FC = () => {
 
     return (
         <div className={styles.pageContainer}>
-            <h1 className={styles.title}>LOMAKINA<br/>ALINA</h1>
-            <div className={`${styles.pointerIcon} ${styles[theme !== null ? theme : 'dark']}`}></div>
+            <div className={styles.content}>
+                <h1 className={styles.title}>LOMAKINA<br/>ALINA</h1>
+                <div className={`${styles.pointerIcon} ${styles[theme !== null ? theme : 'dark']}`}></div>
+            </div>
             <Marquee/>
         </div>
     );

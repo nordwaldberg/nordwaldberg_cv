@@ -1,18 +1,22 @@
 .pageContainer {
   display: flex;
   height: calc(100% - 100px);
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .title {
   align-self: center;
-  margin-left: 10%;
+}
+
+.content {
+  display: flex;
 }
 
 .pointerIcon {
-  position: absolute;
-  left: 50%;
-  width: 60%;
-  height: 60%;
+  margin-left: 5%;
+  width: 220px;
+  height: 450px;
   align-self: center;
   background-repeat: no-repeat;
   background-size: contain;
