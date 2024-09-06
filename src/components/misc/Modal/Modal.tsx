@@ -5,10 +5,11 @@ import {ThemeContext} from '../../App/App';
 export interface ModalProps {
     visible?: boolean;
     setVisible: (visible: boolean) => void;
+    name?: string;
     children?: React.ReactNode;
 }
 
-const Modal: React.FC<ModalProps> = ({visible, setVisible, children}) => {
+const Modal: React.FC<ModalProps> = ({visible, setVisible, name, children}) => {
     const [theme, setTheme] = useContext(ThemeContext);
 
     const showWrapper = visible ? `${styles.wrapper} ${styles.wrapperVisible}` : `${styles.wrapper}`;
@@ -21,6 +22,10 @@ const Modal: React.FC<ModalProps> = ({visible, setVisible, children}) => {
             <div className={`${showPopup} ${styles[theme !== null ? theme : 'dark']}`}
                  onClick={event => event.stopPropagation()}
             >
+                <div className={styles.header}>
+                    <h2>{name}</h2>
+                    <button className={styles.closeBtn} onClick={() => setVisible(false)}>[x]</button>
+                </div>
                 {children}
             </div>
         </div>

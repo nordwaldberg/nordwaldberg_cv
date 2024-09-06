@@ -15,7 +15,7 @@
   backdrop-filter: blur(10px);
   opacity: 0;
   pointer-events: none;
-  transition: 150ms;
+  transition: 200ms;
 }
 
 .wrapperVisible {
@@ -34,13 +34,23 @@
 }
 
 .popupWrapper {
-  width: 50%;
-  padding: 20px 40px;
+  min-width: 45%;
+  padding: $TB_paddings;
   transform: scale(0);
-  transition: 150ms;
-  overflow: auto;
+  transition: 200ms;
+  overflow: hidden;
 }
 
 .popupVisible {
   transform: scale(1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.closeBtn {
+  font-size: 1.35rem;
 }

@@ -1,0 +1,16 @@
+@import "../../variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  align-self: center;
+  margin-bottom: 15px;
+}
+
+.contactLink {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}

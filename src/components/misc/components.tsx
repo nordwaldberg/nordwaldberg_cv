@@ -3,6 +3,7 @@ import styles from './components.module.scss';
 import {ThemeContext} from '../App/App';
 
 interface BracketsProps {
+    size?: string;
     children?: React.ReactNode | React.ReactElement;
 }
 
@@ -11,12 +12,12 @@ interface DropdownProps {
     options?: React.ReactNode[] | React.ReactElement[];
 }
 
-const Brackets: React.FC<BracketsProps> = ({children}) => {
+const Brackets: React.FC<BracketsProps> = ({size, children}) => {
     return (
         <div className={styles.brackets}>
-            <span>[</span>
+            <span style={{fontSize: `${size}`}}>[</span>
             {children}
-            <span>]</span>
+            <span style={{fontSize: `${size}`}}>]</span>
         </div>
     );
 };
@@ -39,11 +40,6 @@ const Marquee: React.FC = () => {
 const Dropdown: React.FC<DropdownProps> = ({btnName, options}) => {
     const [theme, setTheme] = useContext(ThemeContext);
 
-    const handleOptionClick = (option: string) => {
-        console.log(`Вы выбрали: ${option}`);
-    };
-
-
     return (
         <div className={styles.dropdown}>
             <Brackets>
@@ -52,10 +48,10 @@ const Dropdown: React.FC<DropdownProps> = ({btnName, options}) => {
                 </button>
             </Brackets>
             <ul className={`${styles.dropdownOptions} ${styles[theme ? theme : 'dark']}`}>
-                <li className={`${styles.option} ${styles[theme ? theme : 'dark']}`} onClick={() => handleOptionClick('1')}>
+                <li className={`${styles.option} ${styles[theme ? theme : 'dark']}`}>
                     {options ? options[0] : null}
                 </li>
-                <li className={`${styles.option} ${styles[theme ? theme : 'dark']}`} onClick={() => handleOptionClick('2')}>
+                <li className={`${styles.option} ${styles[theme ? theme : 'dark']}`}>
                     {options ? options[1] : null}
                 </li>
             </ul>
