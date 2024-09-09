@@ -12,6 +12,7 @@ const OpenContactsModal: React.FC<ModalProps> = ({visible, setVisible}) => {
                        target="_blank"
                        rel="noreferrer noopener"
                        className={styles.contactLink}
+                       key='github'
                     >
                         <Brackets>github</Brackets>
                     </a>
@@ -19,6 +20,7 @@ const OpenContactsModal: React.FC<ModalProps> = ({visible, setVisible}) => {
                        target="_blank"
                        rel="noreferrer noopener"
                        className={styles.contactLink}
+                       key='linkedin'
                     >
                         <Brackets>linkedin</Brackets>
                     </a>
@@ -26,6 +28,7 @@ const OpenContactsModal: React.FC<ModalProps> = ({visible, setVisible}) => {
                        target="_blank"
                        rel="noreferrer noopener"
                        className={styles.contactLink}
+                       key='telegram'
                     >
                         <Brackets>telegram</Brackets>
                     </a>
@@ -33,6 +36,7 @@ const OpenContactsModal: React.FC<ModalProps> = ({visible, setVisible}) => {
                        target="_blank"
                        rel="noreferrer noopener"
                        className={styles.contactLink}
+                       key='email'
                     >
                         <Brackets>email</Brackets>
                     </a>
@@ -40,6 +44,7 @@ const OpenContactsModal: React.FC<ModalProps> = ({visible, setVisible}) => {
                        target="_blank"
                        rel="noreferrer noopener"
                        className={styles.contactLink}
+                       key='hh'
                     >
                         <Brackets>hh</Brackets>
                     </a>

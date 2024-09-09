@@ -20,15 +20,15 @@ const Header: React.FC = () => {
         <div className={styles.header}>
             <a className={`${styles.logo} ${theme === 'dark' ? styles.dark : styles.light}`}></a>
             <ul className={styles.links}>
-                <li className={styles.link}>
+                <li key='downloadCV' className={styles.link}>
                     <Dropdown btnName={'downloadCV'} options={dropdownOptions}/>
                 </li>
-                <li className={styles.link}>
+                <li key='openContacts' className={styles.link}>
                     <Brackets>
                         <button onClick={() => setContactsVisible(true)}>openContacts</button>
                     </Brackets>
                 </li>
-                <li className={styles.link}>
+                <li key='showCertificates' className={styles.link}>
                     <Brackets>
                         <button onClick={() => setCertificatesVisible(true)}>showCertificates</button>
                     </Brackets>
