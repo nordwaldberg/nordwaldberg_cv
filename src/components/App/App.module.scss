@@ -2,8 +2,8 @@
 
 .appBackground {
   z-index: -666;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   bottom: -350px;
   right: -30px;
@@ -19,4 +19,13 @@
 
 .lightThemeBackground {
   background-image: url("../../../public/light_net.svg");
+}
+
+@media (max-width: 1024px) {
+  .appBackground {
+    bottom: unset;
+    right: unset;
+    top: 200px;
+    left: 55px;
+  }
 }

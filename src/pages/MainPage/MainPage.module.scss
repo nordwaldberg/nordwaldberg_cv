@@ -7,6 +7,7 @@
 
 .title {
   align-self: center;
+  margin-right: 10%;
 }
 
 .content {
@@ -14,12 +15,12 @@
 }
 
 .pointerIcon {
-  margin-left: 5%;
-  width: 220px;
+  width: 290px;
   height: 450px;
   align-self: center;
   background-repeat: no-repeat;
   background-size: contain;
+  transform: rotate(-8deg);
 }
 
 .light {
@@ -28,4 +29,28 @@
 
 .dark {
   background-image: url("../../../public/pointer_light.PNG");
+}
+
+@media (max-width: 1024px) {
+
+  .pageContainer {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    flex-direction: column-reverse;
+    padding-bottom: 5vh;
+  }
+
+  .pointerIcon {
+    height: 350px;
+    margin-left: 35%;
+    margin-bottom: 40px;
+  }
+
+  .title {
+    font-size: 15vw;
+    margin-right: 0;
+  }
 }
