@@ -10,6 +10,7 @@ const Header: React.FC = () => {
     const [theme, setTheme] = useContext(ThemeContext);
     const [isContactsVisible, setContactsVisible] = React.useState(false);
     const [isCertificatesVisible, setCertificatesVisible] = React.useState(false);
+    const [isContentOpen, setContentOpen] = React.useState(false);
 
     const dropdownOptions: React.ReactNode[] | React.ReactElement[] = [
         <a href="/static_files/CV_EN.pdf" download="CV_EN.pdf">english</a>,
@@ -25,16 +26,24 @@ const Header: React.FC = () => {
                 </li>
                 <li key='openContacts' className={styles.link}>
                     <Brackets>
-                        <button onClick={() => setContactsVisible(true)}>openContacts</button>
+                        <button
+                            onClick={() => setContactsVisible(true)}>
+                            openContacts
+                        </button>
                     </Brackets>
                 </li>
                 <li key='showCertificates' className={styles.link}>
                     <Brackets>
-                        <button onClick={() => setCertificatesVisible(true)}>showCertificates</button>
+                        <button
+                            onClick={() => setCertificatesVisible(true)}>
+                            showCertificates
+                        </button>
                     </Brackets>
                 </li>
             </ul>
-
+            <button className={`${styles.menuSwitcher} ${isContentOpen ? styles.closed : styles.opened} ${theme === 'dark' ? styles.dark : styles.light}` }
+                    onClick={() => setContentOpen(!isContentOpen)}
+            ></button>
             <button className={styles.themeSwitcher} onClick={() => {
                 if (setTheme !== null) {
                     theme === 'dark' ? setTheme('light') : setTheme('dark');
@@ -44,8 +53,14 @@ const Header: React.FC = () => {
                     {theme === 'dark' ? 'switchToLightTheme' : 'switchToDarkTheme'}
                 </Brackets>
             </button>
-            <OpenContactsModal visible={isContactsVisible} setVisible={setContactsVisible}/>
-            <ShowCertificatesModal visible={isCertificatesVisible} setVisible={setCertificatesVisible}/>
+            <OpenContactsModal
+                visible={isContactsVisible}
+                setVisible={setContactsVisible}
+            />
+            <ShowCertificatesModal
+                visible={isCertificatesVisible}
+                setVisible={setCertificatesVisible}
+            />
         </div>
     );
 };

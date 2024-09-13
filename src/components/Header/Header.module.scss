@@ -4,6 +4,7 @@
   min-height: 72px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   border-bottom: 1px solid;
   padding-bottom: $TB_paddings;
@@ -44,4 +45,47 @@
 .themeSwitcher {
   padding: 10px;
   margin-left: 20px;
+}
+
+.menuSwitcher {
+  display: none;
+}
+
+@media (max-width: 1020px) {
+  .link {
+    display: none;
+  }
+
+  .themeSwitcher {
+    display: none;
+  }
+
+  .menuSwitcher {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &.opened {
+
+      &.light {
+        background-image: url("../../../public/open_dark.svg");
+      }
+      &.dark {
+        background-image: url("../../../public/open.svg");
+      }
+
+    }
+
+    &.closed {
+
+      &.light {
+        background-image: url("../../../public/close_dark.svg");
+      }
+      &.dark {
+        background-image: url("../../../public/close.svg");
+      }
+    }
+  }
 }
