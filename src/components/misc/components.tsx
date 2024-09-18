@@ -1,6 +1,7 @@
-import React, {useContext} from 'react';
+import React, {Children, useContext} from 'react';
 import styles from './components.module.scss';
 import {ThemeContext} from '../App/App';
+import header from '../Header/Header';
 
 interface BracketsProps {
     size?: string;
@@ -10,6 +11,17 @@ interface BracketsProps {
 interface DropdownProps {
     btnName: string;
     options?: React.ReactNode[] | React.ReactElement[];
+}
+
+interface ThemeSwitcherProps {
+    styleClassName: string;
+}
+
+interface AccordionListProps {
+    // accordionIsOpen: boolean;
+    // setAccordionIsOpen: (accordionIsOpen: boolean) => void;
+    title: string;
+    children: React.ReactNode | React.ReactElement;
 }
 
 const Brackets: React.FC<BracketsProps> = ({size, children}) => {
@@ -60,8 +72,42 @@ const Dropdown: React.FC<DropdownProps> = ({btnName, options}) => {
     );
 }
 
+const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({styleClassName}) => {
+    const [theme, setTheme] = useContext(ThemeContext);
+
+    return (
+        <button className={styleClassName}
+                onClick={() => theme === 'dark' ? setTheme('light') : setTheme('dark')}>
+            <Brackets>
+                {theme === 'dark' ? 'switchToLightTheme' : 'switchToDarkTheme'}
+            </Brackets>
+        </button>
+    );
+}
+
+const AccordionList: React.FC<AccordionListProps> = ({title, children}) => {
+    const [theme, setTheme] = useContext(ThemeContext);
+    const [accordionIsOpen, setAccordionIsOpen] = React.useState(false);
+
+    return (
+        <div className={styles.accordionList}>
+            <Brackets size='1.8rem'>
+                <button className={styles.accordionBtn}
+                        onClick={() => setAccordionIsOpen(!accordionIsOpen)}>
+                    {title}
+                </button>
+            </Brackets>
+            <ul className={`${styles.accordionContent} ${accordionIsOpen ? null : styles.close}`}>
+                {Children.map(children, child => <li className={`${styles.accordionOption} ${styles[theme ? theme : 'dark']}`}>{child}</li>)}
+            </ul>
+        </div>
+    );
+}
+
 export {
     Brackets,
     Marquee,
     Dropdown,
+    ThemeSwitcher,
+    AccordionList,
 };

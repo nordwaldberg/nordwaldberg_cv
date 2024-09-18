@@ -1,0 +1,43 @@
+@import "../../variables";
+@import "../../animations";
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 100px);
+  padding-left: 10%;
+  padding-right: 10%;
+  overflow-y: scroll;
+}
+
+.accordionListWrapper {
+  margin-top: 150px;
+}
+
+.themeSwitcher {
+  font-size: 1.8rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.title {
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.date {
+  font-weight: 400;
+  font-size: .8rem;
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+  .pageContainer {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}

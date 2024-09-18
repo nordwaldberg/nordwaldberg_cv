@@ -1,5 +1,5 @@
-@import "../../animations";
 @import "../../variables";
+@import "../../animations";
 
 .brackets {
   display: flex;
@@ -91,3 +91,49 @@
   justify-content: center;
 }
 
+
+
+.accordionList {
+  margin-bottom: 40px;
+}
+
+.accordionBtn {
+  font-size: 1.8rem;
+}
+
+.accordionContent {
+  margin-top: 20px;
+  animation: sweep .3s ease-in-out;
+}
+
+.accordionOption {
+  padding: 10px;
+  border: 1px solid;
+  border-top: none;
+
+  &:first-child {
+    border-top: 1px solid;
+  }
+
+  &.dark {
+    background-color: $main_color_dark;
+  }
+
+  &.light {
+    background-color: $main_color_light;
+  }
+
+  &:hover.dark {
+    background-color: $main_color_light;
+    color: $main_color_dark;
+  }
+
+  &:hover.light {
+    background-color: $main_color_dark;
+    color: $main_color_light;
+  }
+}
+
+.close {
+  display: none;
+}

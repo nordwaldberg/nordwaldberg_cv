@@ -31,6 +31,14 @@ body {
   height: 100%;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  display: none;
+}
+
 //reset
 
 li {

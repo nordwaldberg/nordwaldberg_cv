@@ -1,10 +1,9 @@
 import React, {useContext} from 'react';
 import styles from './Header.module.scss';
-import {Brackets, Dropdown} from '../misc/components';
+import {Brackets, Dropdown, ThemeSwitcher} from '../misc/components';
 import {MobileContentContext, ThemeContext} from '../App/App';
 import OpenContactsModal from '../OpenContactsModal/OpenContactsModal';
 import ShowCertificatesModal from '../ShowCertificatesModal/ShowCertificatesModal';
-import {log} from 'node:util';
 
 
 const Header: React.FC = () => {
@@ -46,11 +45,7 @@ const Header: React.FC = () => {
             <button className={`${styles.menuSwitcher} ${isContentOpen ? styles.closed : styles.opened} ${theme === 'dark' ? styles.dark : styles.light}` }
                     onClick={() => setContentOpen(!isContentOpen)}>
             </button>
-            <button className={styles.themeSwitcher} onClick={() => theme === 'dark' ? setTheme('light') : setTheme('dark')}>
-                <Brackets>
-                    {theme === 'dark' ? 'switchToLightTheme' : 'switchToDarkTheme'}
-                </Brackets>
-            </button>
+            <ThemeSwitcher styleClassName={styles.themeSwitcher}/>
             <OpenContactsModal
                 visible={isContactsVisible}
                 setVisible={setContactsVisible}
