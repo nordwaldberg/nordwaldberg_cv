@@ -19,9 +19,11 @@
 
 .marqueeContainer {
   position: absolute;
+  overflow: hidden;
   width: 100vw;
   height: 22px;
   bottom: 40px;
+  left: 0;
 }
 
 .marqueeWrapper {

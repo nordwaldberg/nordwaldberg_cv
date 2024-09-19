@@ -1,8 +1,6 @@
 .pageContainer {
   display: flex;
   height: calc(100% - 100px);
-  padding-left: 10%;
-  padding-right: 10%;
 }
 
 .title {
@@ -12,6 +10,8 @@
 
 .content {
   display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .pointerIcon {
