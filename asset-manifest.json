@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nordwaldberg_cv/static/css/main.4862ac12.css",
-    "main.js": "/nordwaldberg_cv/static/js/main.583673ec.js",
+    "main.css": "/nordwaldberg_cv/static/css/main.3b3d376c.css",
+    "main.js": "/nordwaldberg_cv/static/js/main.5704ec58.js",
     "static/media/pointer_dark.PNG": "/nordwaldberg_cv/static/media/pointer_dark.073adb6b8311db82e0e1.PNG",
     "static/media/pointer_light.PNG": "/nordwaldberg_cv/static/media/pointer_light.788ae9d9d1422bff3797.PNG",
     "static/media/light_net.svg": "/nordwaldberg_cv/static/media/light_net.8fcb9482e2324a45ee84.svg",
@@ -13,11 +13,11 @@
     "index.html": "/nordwaldberg_cv/index.html",
     "static/media/open_dark.svg": "/nordwaldberg_cv/static/media/open_dark.bfa5302037d4c6096fc1.svg",
     "static/media/open.svg": "/nordwaldberg_cv/static/media/open.0fb161e124bc4965b4c3.svg",
-    "main.4862ac12.css.map": "/nordwaldberg_cv/static/css/main.4862ac12.css.map",
-    "main.583673ec.js.map": "/nordwaldberg_cv/static/js/main.583673ec.js.map"
+    "main.3b3d376c.css.map": "/nordwaldberg_cv/static/css/main.3b3d376c.css.map",
+    "main.5704ec58.js.map": "/nordwaldberg_cv/static/js/main.5704ec58.js.map"
   },
   "entrypoints": [
-    "static/css/main.4862ac12.css",
-    "static/js/main.583673ec.js"
+    "static/css/main.3b3d376c.css",
+    "static/js/main.5704ec58.js"
   ]
 }
