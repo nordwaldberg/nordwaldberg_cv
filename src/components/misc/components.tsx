@@ -1,7 +1,6 @@
 import React, {Children, useContext} from 'react';
 import styles from './components.module.scss';
 import {ThemeContext} from '../App/App';
-import header from '../Header/Header';
 
 interface BracketsProps {
     size?: string;
@@ -18,10 +17,8 @@ interface ThemeSwitcherProps {
 }
 
 interface AccordionListProps {
-    // accordionIsOpen: boolean;
-    // setAccordionIsOpen: (accordionIsOpen: boolean) => void;
     title: string;
-    children: React.ReactNode | React.ReactElement;
+    children: React.ReactNode[];
 }
 
 const Brackets: React.FC<BracketsProps> = ({size, children}) => {
@@ -90,15 +87,20 @@ const AccordionList: React.FC<AccordionListProps> = ({title, children}) => {
     const [accordionIsOpen, setAccordionIsOpen] = React.useState(false);
 
     return (
-        <div className={styles.accordionList}>
+        <div className={styles.accordionList} key={title}>
             <Brackets size='1.8rem'>
                 <button className={styles.accordionBtn}
-                        onClick={() => setAccordionIsOpen(!accordionIsOpen)}>
+                        onClick={() => setAccordionIsOpen(!accordionIsOpen)}
+                >
                     {title}
                 </button>
             </Brackets>
             <ul className={`${styles.accordionContent} ${accordionIsOpen ? null : styles.close}`}>
-                {Children.map(children, child => <li className={`${styles.accordionOption} ${styles[theme ? theme : 'dark']}`}>{child}</li>)}
+                {Children.map(children, (child) => {
+                    if (React.isValidElement(child)) {
+                        return (<li className={`${styles.accordionOption} ${styles[theme ? theme : 'dark']}`}>{child}</li>)
+                    }
+                })}
             </ul>
         </div>
     );
