@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/nordwaldberg_cv/static/css/main.4862ac12.css",
+    "main.js": "/nordwaldberg_cv/static/js/main.583673ec.js",
+    "static/media/pointer_dark.PNG": "/nordwaldberg_cv/static/media/pointer_dark.073adb6b8311db82e0e1.PNG",
+    "static/media/pointer_light.PNG": "/nordwaldberg_cv/static/media/pointer_light.788ae9d9d1422bff3797.PNG",
+    "static/media/light_net.svg": "/nordwaldberg_cv/static/media/light_net.8fcb9482e2324a45ee84.svg",
+    "static/media/dark_net.svg": "/nordwaldberg_cv/static/media/dark_net.23fe3840434e29cc41f9.svg",
+    "static/media/logo.svg": "/nordwaldberg_cv/static/media/logo.bf3c51464eae64e99248.svg",
+    "static/media/logo_dark.svg": "/nordwaldberg_cv/static/media/logo_dark.3a59befcaf6d79ec6330.svg",
+    "static/media/close.svg": "/nordwaldberg_cv/static/media/close.fc00eac00065fb113e14.svg",
+    "static/media/close_dark.svg": "/nordwaldberg_cv/static/media/close_dark.c829cb95924dfc367d77.svg",
+    "index.html": "/nordwaldberg_cv/index.html",
+    "static/media/open_dark.svg": "/nordwaldberg_cv/static/media/open_dark.bfa5302037d4c6096fc1.svg",
+    "static/media/open.svg": "/nordwaldberg_cv/static/media/open.0fb161e124bc4965b4c3.svg",
+    "main.4862ac12.css.map": "/nordwaldberg_cv/static/css/main.4862ac12.css.map",
+    "main.583673ec.js.map": "/nordwaldberg_cv/static/js/main.583673ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4862ac12.css",
+    "static/js/main.583673ec.js"
+  ]
+}
