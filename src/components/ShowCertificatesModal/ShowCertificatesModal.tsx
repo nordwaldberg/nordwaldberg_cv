@@ -10,7 +10,7 @@ const ShowCertificatesModal: React.FC<ModalProps> = ({visible, setVisible}) => {
             <div className={styles.container}>
                 <div className={styles.content}>
                     <Brackets size={'2.7rem'}>
-                        <a href="/static_files/ya_academy.jpg"
+                        <a href="./static_files/ya_academy.jpg"
                            target="_blank"
                            className={styles.text}
                            key='ya_academy'
@@ -20,7 +20,7 @@ const ShowCertificatesModal: React.FC<ModalProps> = ({visible, setVisible}) => {
                         </a>
                     </Brackets>
                     <Brackets size={'2.7rem'}>
-                        <a href="/static_files/react_udemy.jpg"
+                        <a href="./static_files/react_udemy.jpg"
                            target="_blank"
                            className={styles.text}
                            key='react_udemy'
@@ -30,7 +30,7 @@ const ShowCertificatesModal: React.FC<ModalProps> = ({visible, setVisible}) => {
                         </a>
                     </Brackets>
                     <Brackets size={'2.7rem'}>
-                        <a href="/static_files/MDA.pdf"
+                        <a href="./static_files/MDA.pdf"
                            target="_blank"
                            className={styles.text}
                            key='MDA'
@@ -40,7 +40,7 @@ const ShowCertificatesModal: React.FC<ModalProps> = ({visible, setVisible}) => {
                         </a>
                     </Brackets>
                     <Brackets size={'2.7rem'}>
-                        <a href="/static_files/stepik-linux.pdf"
+                        <a href="./static_files/stepik-linux.pdf"
                            target="_blank"
                            className={styles.text}
                            key='stepik-linux'

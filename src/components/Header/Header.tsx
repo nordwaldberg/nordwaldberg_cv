@@ -14,8 +14,8 @@ const Header: React.FC = () => {
     const [isCertificatesVisible, setCertificatesVisible] = React.useState(false);
 
     const dropdownOptions: React.ReactNode[] | React.ReactElement[] = [
-        <a href="/static_files/CV_EN.pdf" download="CV_EN.pdf">english</a>,
-        <a href="/static_files/CV_RU.pdf" download="CV_RU.pdf">russian</a>,
+        <a href="./static_files/CV_EN.pdf" download="CV_EN.pdf">english</a>,
+        <a href="./static_files/CV_RU.pdf" download="CV_RU.pdf">russian</a>,
     ];
 
     return (
