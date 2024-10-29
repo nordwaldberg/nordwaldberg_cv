@@ -8,6 +8,7 @@
   padding-left: 10%;
   padding-right: 10%;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .accordionListWrapper {
@@ -16,6 +17,7 @@
 
 .themeSwitcher {
   font-size: 1.8rem;
+  margin-bottom: 120px;
 }
 
 .text {
@@ -39,5 +41,6 @@
   .pageContainer {
     padding-left: 3%;
     padding-right: 3%;
+    overflow-x: hidden;
   }
 }

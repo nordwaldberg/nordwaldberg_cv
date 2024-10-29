@@ -6,7 +6,14 @@
 
   span {
     opacity: 0;
-    padding: 0 10px;
+
+    &:first-child {
+      padding-right: 10px;
+    }
+
+    &:last-child {
+      padding-left: 10px;
+    }
   }
 
   &:hover {
