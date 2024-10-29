@@ -40,7 +40,7 @@ const OpenContactsModal: React.FC<ModalProps> = ({visible, setVisible}) => {
                     >
                         <Brackets>email</Brackets>
                     </a>
-                    <a href="https://spb.hh.ru/resume/9adcb3c2ff088f64c30039ed1f5a79796f345a"
+                    <a href="https://spb.hh.ru/resume/6fd30a6dff079f42180039ed1f354733796d59"
                        target="_blank"
                        rel="noreferrer noopener"
                        className={styles.contactLink}
