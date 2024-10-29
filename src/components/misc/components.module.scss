@@ -109,7 +109,6 @@
 }
 
 .accordionOption {
-  padding: 10px;
   border: 1px solid;
   border-top: none;
 
@@ -133,6 +132,11 @@
   &:hover.light {
     background-color: $main_color_dark;
     color: $main_color_light;
+  }
+
+  a {
+    display: block;
+    padding: 10px;
   }
 }
 
