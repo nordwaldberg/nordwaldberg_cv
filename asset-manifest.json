@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/nordwaldberg_cv/static/css/main.6c263fe5.css",
+    "main.css": "/nordwaldberg_cv/static/css/main.ad6aeb80.css",
     "main.js": "/nordwaldberg_cv/static/js/main.a5947f5e.js",
     "static/media/pointer_dark.PNG": "/nordwaldberg_cv/static/media/pointer_dark.073adb6b8311db82e0e1.PNG",
     "static/media/pointer_light.PNG": "/nordwaldberg_cv/static/media/pointer_light.788ae9d9d1422bff3797.PNG",
@@ -13,11 +13,11 @@
     "index.html": "/nordwaldberg_cv/index.html",
     "static/media/open_dark.svg": "/nordwaldberg_cv/static/media/open_dark.bfa5302037d4c6096fc1.svg",
     "static/media/open.svg": "/nordwaldberg_cv/static/media/open.0fb161e124bc4965b4c3.svg",
-    "main.6c263fe5.css.map": "/nordwaldberg_cv/static/css/main.6c263fe5.css.map",
+    "main.ad6aeb80.css.map": "/nordwaldberg_cv/static/css/main.ad6aeb80.css.map",
     "main.a5947f5e.js.map": "/nordwaldberg_cv/static/js/main.a5947f5e.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c263fe5.css",
+    "static/css/main.ad6aeb80.css",
     "static/js/main.a5947f5e.js"
   ]
 }
